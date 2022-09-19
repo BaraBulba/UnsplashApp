@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/unsplash_nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="android.example.unsplash.fragments.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_fullScreenAvatarFragment"
+            app:destination="@id/fullScreenAvatarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullScreenAvatarFragment"
+        android:name="android.example.unsplash.fragments.FullScreenAvatarFragment"
+        android:label="FullScreenAvatarFragment" >
+        <argument
+            android:name="photo"
+            app:argType="string" />
+    </fragment>
+</navigation>
